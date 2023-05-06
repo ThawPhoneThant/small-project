@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+      /* html{
+         background-color: aliceblue;
+      } */
+   body{
+      /* position:relative; */
+      width: 350px;
+      margin: 30px auto;
+      border: 1px solid black;
+      padding: 20px;
+      
+   }
+   h1{
+      width: 400px;
+      font-size: 25px;
+   }
+   p{
+      
+      font-size: 20px;
+   }
+   button{
+      margin-left: 90px;
+   }
+   /* dialog */
+   #overlay{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0.5;
+      background-color: rgb(136, 136, 123);
+      display: none;
+   }
+   #dialog{
+      position:absolute;
+      width:300px ;
+      top: 40px;
+      left:35%;
+      background-color: bisque;
+      border: none;
+      border-radius: 20px;
+      padding:10px;
+      display: none;
+   }
+   #dialog h2{
+      margin-left: 40px;
+      cursor: pointer;
+   }
+   #dialog input{
+      margin-bottom: 10px;
+   
+      border-radius: 20px;
+      outline: none;
+      border: none;
+      padding: 3px 10px
+   }
+   #dialog textarea{
+      border-radius: 10px;
+      width: 100%;
+   }
+</style>
+<body>
+    <h1>This is my awesome website!</h1> 
+      <p> 
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+      consequat. 
+      </p> 
+    
+    <button onClick="showDialog()">Contact Me?</button> 
+ <!-- Dialog --> 
+    <div id="overlay" onClick="hideDialog()"></div> 
+   <div id="dialog"> 
+    <h2>Contact Me? <span onClick="hideDialog()">&times;</span></h2> 
+    <form> 
+        <input type="text" placeholder="Your email"> 
+        <textarea placeholder="Your message"></textarea> 
+        <input type="submit" value="Send"> 
+    </form> 
+ </div> 
+    
+<script>
+   const overlay = document.querySelector("#overlay")
+   const dialog = document.querySelector("#dialog")
+
+   const showDialog = ()=>{
+      overlay.style.display = "inline";
+      dialog.style.display = "inline"
+   }
+   
+   const hideDialog = ()=>{
+      overlay.style.display = "none";
+      dialog.style.display = "none"
+   }
+
+
+</script>
+</body>
+</html>

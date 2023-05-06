@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.city{
+    background-image: url(./image/A-Illustration-Vector-City-Background-Graphics-3644670-1-312x208.jpg);
+    width: 500%;
+    height: 100vh;
+    background-size: contain;
+    background-repeat: repeat-x;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: city 6s linear infinite;
+}
+
+ @keyframes city{
+    100%{
+        transform: translateX(-1400px);
+        /* background-repeat: repeat-x; */
+    }
+}
+.balloon{
+    background-image: url(./image/hot-air-balloon-cartoon-png-favpng-fvQLw4cug7c5TUNuqxhputBe3.png);
+    width: 100%;
+    height: 100%;
+    margin-top: 3%;
+    /* margin-left: 20%; */
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    z-index: 2;
+    animation: balloon 6s linear infinite;
+    transition: all 1s linear;
+    
+}
+ @keyframes balloon{
+   50%{
+        
+        transform: translateX(1400px);
+        display: inline;
+    }
+    100%{
+        transition: rotate 0.5s linear;
+        transform: rotate(-50deg);
+    }
+ } 

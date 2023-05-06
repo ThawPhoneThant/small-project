@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+    }
+    body{
+        min-height: 100vh;
+        background-color: rgb(39, 33, 33);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+        
+    }
+    div{
+        width: 200px;
+        height: 200px;
+        /* border: 1px solid rgb(166, 160, 160); */
+        box-shadow: 16px 14px 20px #0000008c;
+        text-align: center;
+        border-radius: 10px;
+        color: antiquewhite;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        
+    }
+    div::before{
+        content: "";
+        background-image: conic-gradient(
+            red 20deg,
+            transparent 120deg
+        );
+        width: 150%;
+        height: 150%;
+        position: absolute;
+        right: 0;
+        animation: rotate 2s linear infinite;
+    }
+    div::after{
+        content: "Animation";
+        position: absolute;
+        width: 95%;
+        height: 97%;
+        background-color: black;
+        letter-spacing: 4px;
+        border-radius: 10px;
+        color: red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+    }
+    @keyframes rotate{
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+
+</style>
+<body>
+    <div></div>
+</body>
+</html>
